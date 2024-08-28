@@ -12,8 +12,6 @@ import { postSignup, postLogin } from './controllers/user.js';
 
 import { postTransaction, getTransactions, deleteTransaction } from "./controllers/transaction.js";
 
-
-// Connect to MongoDB
 const connectDB = async () =>{
   const conn = await mongoose.connect(process.env.MONGODB_URL)
 
