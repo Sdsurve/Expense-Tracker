@@ -22,7 +22,7 @@ const connectDB = async () =>{
 connectDB();
 
 
-app.get('/', (req, res) => {
+app.get('/health', (req, res) => {
   res.json({
     message: `Welcome to Expense Tracker API`
   })
@@ -35,7 +35,7 @@ app.post("/transaction", postTransaction)
 app.get("/transactions", getTransactions)
 app.delete("/transaction/:id", deleteTransaction)
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 7000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
